@@ -1,9 +1,11 @@
+import 'package:cook_bd/routes/app_routes.dart';
 import 'package:cook_bd/screens/onboarding_screen/models/onboarding.dart';
 import 'package:cook_bd/utils/app_colors.dart';
 import 'package:cook_bd/utils/app_urls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -17,18 +19,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final List<Onboarding> _data = [
     Onboarding(
       imgUrl: AppUrls.onboarding1,
-      title: 'Are you starving?',
-      subTitle: 'Within a few clicks, find meals that are accessible near you',
+      title: 'screen1Title',
+      subTitle: 'screen1SubTitle',
     ),
     Onboarding(
       imgUrl: AppUrls.onboarding2,
-      title: 'Are you starving?',
-      subTitle: 'Within a few clicks, find meals that are accessible near you',
+      title: 'screen2Title',
+      subTitle: 'screen2SubTitle',
     ),
     Onboarding(
       imgUrl: AppUrls.onboarding3,
-      title: 'Are you starving?',
-      subTitle: 'Within a few clicks, find meals that are accessible near you',
+      title: 'screen3Title',
+      subTitle: 'screen3SubTitle',
     ),
   ];
 
@@ -42,7 +44,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   void _skip() {
-    // Implement skip functionality
+   Get.offNamed(AppRoutes.signInScreen);
   }
 
   void _prev() {
@@ -61,7 +63,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         curve: Curves.ease,
       );
     } else {
-      // Implement navigation to the main screen
+      Get.offNamed(AppRoutes.signInScreen);
     }
   }
 
@@ -106,13 +108,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           borderRadius: BorderRadius.circular(48.r), color: yellowClr),
       child: Column(
         children: [
-          Text(onboarding.title,
+          Text(onboarding.title.tr,
               style: Theme.of(context)
                   .textTheme
                   .titleLarge!
                   .copyWith(color: darkFontClr)),
           Gap(16.h),
-          Text(onboarding.subTitle,
+          Text(onboarding.subTitle.tr,
               style: Theme.of(context)
                   .textTheme
                   .bodyMedium!
@@ -146,7 +148,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
           child: IconButton(
               onPressed: () {
-                // Implement finish button functionality
+               Get.offNamed(AppRoutes.signInScreen);
               },
               icon: Icon(Icons.chevron_right, color: yellowClr, size: 25.sp))),
       child: Row(
@@ -154,14 +156,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           TextButton(
               onPressed: _currentIndex == 0 ? _skip : _prev,
-              child: Text(_currentIndex == 0 ? 'Skip' : 'Prev',
+              child: Text(_currentIndex == 0 ? 'skip'.tr : 'prev'.tr,
                   style: Theme.of(context)
                       .textTheme
                       .titleMedium!
                       .copyWith(color: darkFontClr))),
           TextButton(
               onPressed: _next,
-              child: Text('Next',
+              child: Text('next'.tr,
                   style: Theme.of(context)
                       .textTheme
                       .titleMedium!

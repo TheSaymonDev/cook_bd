@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPreferencesService().init();
   runApp(const MyApp());
@@ -19,20 +19,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  ScreenUtilInit(
+    return ScreenUtilInit(
       minTextAdapt: true,
       splitScreenMode: true,
       designSize: const Size(430, 930),
       builder: (_, child) => GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        translations: AppLocalization(),
-        fallbackLocale: const Locale('en', 'US'),
-        initialRoute: AppRoutes.initialRoute,
-        getPages: AppPages.pages,
-        initialBinding: AppInitialBindings(),
-        theme: lightTheme,
-        darkTheme: darkTheme,
-      ),
+          debugShowCheckedModeBanner: false,
+          translations: AppLocalization(),
+          fallbackLocale: const Locale('en', 'US'),
+          initialRoute: AppRoutes.onboardingScreen,
+          getPages: AppPages.pages,
+          initialBinding: AppInitialBindings(),
+          theme: lightTheme,
+          darkTheme: darkTheme),
     );
   }
 }

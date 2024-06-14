@@ -45,22 +45,24 @@ final lightTheme = ThemeData(
         indicatorColor: primaryClr.withOpacity(0.5)),
     cardColor: lightCardClr,
   inputDecorationTheme: InputDecorationTheme(
-
     filled: true,
     fillColor: lightBgClr,
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8.r),
-      borderSide: BorderSide(color: lightBorderClr, width: 1.w),
+      borderSide: BorderSide(color: greyClr, width: 1.5.w),
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8.r),
-      borderSide: BorderSide(color: lightBorderClr, width: 1.w),
+      borderSide: BorderSide(color: greyClr, width: 1.5.w),
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8.r),
-      borderSide: BorderSide(color: lightBorderClr, width: 1.w),
+      borderSide: BorderSide(color: greyClr, width: 1.5.w),
     ),
-  )
+  ),
+    appBarTheme: const AppBarTheme(
+    backgroundColor: lightBgClr
+)
 );
 
 
@@ -121,5 +123,8 @@ final darkTheme = ThemeData(
         borderRadius: BorderRadius.circular(8.r),
         borderSide: BorderSide(color: darkBorderClr, width: 1.w),
       ),
+    ),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: darkBgClr
     )
 );

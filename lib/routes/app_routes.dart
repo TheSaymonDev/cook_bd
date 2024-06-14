@@ -1,9 +1,11 @@
 class AppRoutes {
   static const initialRoute = onboardingScreen;
   static const onboardingScreen = '/onboarding_screen';
-  static const registrationScreen = '/registration_screen';
-  static const mobileVerificationScreen = '/mobile_verification_screen';
+  static const signInScreen = '/sign_in_screen';
+  static const signUpScreen = '/sign_up_screen';
+  static const identityVerificationScreen = '/identity_verification_screen';
   static const otpVerificationScreen = '/otp_verification_screen';
+  static const setPasswordScreen = '/set_password_screen';
   static const homeScreen = '/home_screen';
   static const feedScreen = '/feed_screen';
   static const requestScreen = '/request_screen';

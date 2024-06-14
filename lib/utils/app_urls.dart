@@ -1,6 +1,10 @@
-class AppUrls{
+class AppUrls {
   // For Onboarding Screen
   static const onboarding1 = 'assets/images/onboarding1.png';
   static const onboarding2 = 'assets/images/onboarding2.png';
   static const onboarding3 = 'assets/images/onboarding3.png';
+
+  // For SignIn and SignUp Screen
+  static const facebook = 'assets/vectors/facebook.svg';
+  static const google = 'assets/vectors/google.svg';
 }
