@@ -31,10 +31,6 @@ final lightTheme = ThemeData(
       titleSmall:
           TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold, height: 1),
     ),
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: lightBgClr,
-      foregroundColor: darkBgClr,
-    ),
     navigationBarTheme: NavigationBarThemeData(
         iconTheme:
             const WidgetStatePropertyAll(IconThemeData(color: lightFontClr)),
@@ -42,7 +38,7 @@ final lightTheme = ThemeData(
             fontSize: 18.sp, fontWeight: FontWeight.bold, color: lightFontClr)),
         shadowColor: lightCardClr,
         backgroundColor: lightBgClr,
-        indicatorColor: primaryClr.withOpacity(0.5)),
+        indicatorColor: yellowClr.withOpacity(0.5)),
     cardColor: lightCardClr,
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
@@ -95,10 +91,6 @@ final darkTheme = ThemeData(
     titleSmall:
         TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold, height: 1),
   ),
-  floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: darkBgClr,
-    foregroundColor: lightBgClr,
-  ),
   navigationBarTheme: NavigationBarThemeData(
       iconTheme:
           const WidgetStatePropertyAll(IconThemeData(color: darkFontClr)),
@@ -106,7 +98,7 @@ final darkTheme = ThemeData(
           fontSize: 18.sp, fontWeight: FontWeight.bold, color: darkFontClr)),
       shadowColor: darkBgClr,
       backgroundColor: darkCardClr,
-      indicatorColor: primaryClr.withOpacity(0.5)),
+      indicatorColor: yellowClr.withOpacity(0.5)),
   cardColor: darkCardClr,
     inputDecorationTheme: InputDecorationTheme(
       filled: true,

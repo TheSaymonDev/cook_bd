@@ -1,4 +1,5 @@
 import 'package:cook_bd/routes/app_routes.dart';
+import 'package:cook_bd/screens/home_screen/bindings/home_binding.dart';
 import 'package:cook_bd/screens/home_screen/home_screen.dart';
 import 'package:cook_bd/screens/identity_verification_screen/bindings/identity_verification_binding.dart';
 import 'package:cook_bd/screens/identity_verification_screen/identity_verification_screen.dart';
@@ -39,6 +40,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.homeScreen,
       page: () => HomeScreen(),
+      binding: HomeBinding()
     )
   ];
 }

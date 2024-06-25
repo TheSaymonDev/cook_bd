@@ -10,6 +10,5 @@ const lightFontClr= Color(0xFF000000);
 const lightCardClr= Color(0xFFF2F2F2);
 const lightBorderClr = Color(0xFF6F4E37);
 
-const primaryClr = Color(0xFFFF3636);
 const yellowClr = Color(0xFFFFAE17);
 const greyClr = Color(0xFFB0B0B0);

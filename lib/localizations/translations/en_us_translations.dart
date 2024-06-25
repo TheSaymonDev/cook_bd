@@ -51,12 +51,14 @@ final Map<String, String> enUs = {
 
   // For IdentityVerification Screen
   'identityTitle': 'Forgot password?',
-  'identitySubTitle': 'Select which contact details should we use to reset your password',
+  'identitySubTitle':
+      'Select which contact details should we use to reset your password',
   'forgotPass': 'Forgot Password',
 
   // For SetPassword Screen
   'setPasswordTitle': 'Set New Password',
-  'setPasswordSubTitle': 'Your new password must be different from the previously used password',
+  'setPasswordSubTitle':
+      'Your new password must be different from the previously used password',
   'setPasswordOldPassLabel': 'Old Password',
   'setPasswordOldPassHint': 'Please enter old password',
   'setPasswordNewPassLabel': 'New Password',
@@ -67,8 +69,33 @@ final Map<String, String> enUs = {
 
   //For OtpVerification Screen
   'otpTitle': 'Otp Verification',
-  'otpSubTitle': "Enter the verification code we send you on:Your******@gmail.com",
+  'otpSubTitle':
+      "Enter the verification code we send you on:Your******@gmail.com",
   'receiveCode': "Didn’t receive code? ",
   'resend': 'Resend',
-  'continue': 'Continue'
+  'continue': 'Continue',
+
+  // For Home Screen
+  'nav1': 'Home',
+  'nav2': 'Package',
+  'nav3': 'Cart',
+  'nav4': 'My Order',
+  'nav5': 'Profile',
+
+  // For Explore Screen
+  'yourLocation': 'Your Location',
+  'exploreHeading': 'Provide the best\nfood for you',
+  'findByC': 'Find By Category',
+
+  // For Profile Screen
+  'personalData': 'Personal Data',
+  'favourites': 'Favourites',
+  'orderHistory': 'Order History',
+  'offers': 'Offers',
+  'location': 'Location',
+  'settings': 'Settings',
+  'helpCenter': 'Help Center',
+  'requestAccountDeletion': 'Request Account Deletion',
+  'addAnotherAccount': 'Add Another Account',
+  'signOut': 'Sign Out'
 };
