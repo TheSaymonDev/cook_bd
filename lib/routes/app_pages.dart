@@ -3,6 +3,7 @@ import 'package:cook_bd/screens/home_screen/bindings/home_binding.dart';
 import 'package:cook_bd/screens/home_screen/home_screen.dart';
 import 'package:cook_bd/screens/identity_verification_screen/bindings/identity_verification_binding.dart';
 import 'package:cook_bd/screens/identity_verification_screen/identity_verification_screen.dart';
+import 'package:cook_bd/screens/location_permission_screen/location_permission_screen.dart';
 import 'package:cook_bd/screens/onboarding_screen/onboarding_screen.dart';
 import 'package:cook_bd/screens/otp_verification_screen/otp_verification_screen.dart';
 import 'package:cook_bd/screens/set_password_screen/bindings/set_password_binding.dart';
@@ -33,14 +34,16 @@ class AppPages {
       page: () => OtpVerificationScreen(),
     ),
     GetPage(
-      name: AppRoutes.setPasswordScreen,
-      page: () => SetPasswordScreen(),
-      binding: SetPasswordBinding()
+        name: AppRoutes.setPasswordScreen,
+        page: () => SetPasswordScreen(),
+        binding: SetPasswordBinding()),
+    GetPage(
+      name: AppRoutes.locationPermissionScreen,
+      page: () => LocationPermissionScreen(),
     ),
     GetPage(
-      name: AppRoutes.homeScreen,
-      page: () => HomeScreen(),
-      binding: HomeBinding()
-    )
+        name: AppRoutes.homeScreen,
+        page: () => HomeScreen(),
+        binding: HomeBinding())
   ];
 }

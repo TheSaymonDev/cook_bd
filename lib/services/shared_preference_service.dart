@@ -1,7 +1,8 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SharedPreferencesService{
-  static final SharedPreferencesService _instance = SharedPreferencesService._internal();
+class SharedPreferencesService {
+  static final SharedPreferencesService _instance =
+      SharedPreferencesService._internal();
   factory SharedPreferencesService() => _instance;
   SharedPreferencesService._internal();
   late SharedPreferences _prefs;
@@ -12,6 +13,7 @@ class SharedPreferencesService{
   void saveTheme(String theme) {
     _prefs.setString('themeKey', theme);
   }
+
   String getTheme() {
     return _prefs.getString('themeKey') ?? '';
   }
@@ -19,7 +21,16 @@ class SharedPreferencesService{
   void saveLanguage(String language) {
     _prefs.setString('languageKey', language);
   }
+
   String getLanguage() {
     return _prefs.getString('languageKey') ?? '';
+  }
+
+  void saveLocation(String location) {
+    _prefs.setString('locationKey', location);
+  }
+
+  String getLocation() {
+    return _prefs.getString('locationKey') ?? '';
   }
 }

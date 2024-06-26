@@ -1,27 +1,24 @@
+import 'package:cook_bd/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
-class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppbar({
-    super.key,
-    required this.onPressedBack,
-    required this.title,
-  });
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
-  final void Function() onPressedBack;
+  final void Function() onPressed;
   final String title;
-
-  @override
-  Size get preferredSize => Size.fromHeight(60.h);
+  const CustomAppBar({super.key, required this.onPressed, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      centerTitle: true,
-      leading: IconButton(onPressed: onPressedBack, icon: FaIcon(FontAwesomeIcons.circleChevronLeft, size: 25.sp,)),
-      title: Text(title, style: Theme.of(context).textTheme.titleMedium), // Use null if title is not provided
+      backgroundColor: Colors.transparent,
+      leading: IconButton(onPressed: onPressed, icon: Icon(Icons.arrow_back, size: 25.sp, color: lightBgClr)),
+      title: Text(title,  style: Get.textTheme.titleMedium!.copyWith(color: lightBgClr)),
       toolbarHeight: preferredSize.height,
     );
   }
+
+  @override
+  Size get preferredSize => Size.fromHeight(60.h);
 }

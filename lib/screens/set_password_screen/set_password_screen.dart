@@ -23,7 +23,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(onPressedBack: (){}, title: 'setPasswordTitle'.tr),
+      appBar: CustomAppBar(onPressed: (){}, title: 'setPasswordTitle'.tr),
       body: Container(
         height: double.infinity.h,
         width: double.infinity.w,

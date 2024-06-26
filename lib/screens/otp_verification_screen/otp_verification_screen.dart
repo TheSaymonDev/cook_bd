@@ -18,7 +18,7 @@ class OtpVerificationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(onPressedBack: () {}, title: 'otpTitle'.tr),
+      appBar: CustomAppBar(onPressed: () {}, title: 'otpTitle'.tr),
       body: Container(
         height: double.infinity.h,
         width: double.infinity.w,

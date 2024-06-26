@@ -33,7 +33,7 @@ class _IdentityVerificationScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(onPressedBack: (){}, title: 'identityTitle'.tr),
+      appBar: CustomAppBar(onPressed: (){}, title: 'identityTitle'.tr),
       body: Container(
         height: double.infinity.h,
         width: double.infinity.w,

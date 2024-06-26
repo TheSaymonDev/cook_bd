@@ -75,6 +75,12 @@ final Map<String, String> enUs = {
   'resend': 'Resend',
   'continue': 'Continue',
 
+  // For LocationPermissionScreen
+  'locationTitle': 'What is your location?',
+  'locationSubTitle': 'We need to know your location in order to suggest\nnearby services',
+  'locationBtnName': 'Allow Location Access',
+  'locationBtnName1': 'Enter Location Manually',
+
   // For Home Screen
   'nav1': 'Home',
   'nav2': 'Package',

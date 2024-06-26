@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
 
   final List<Widget> _screens = [
     const ExploreScreen(),
-    const PackageScreen(),
+    PackageScreen(),
     const CartScreen(),
     const MyOrderScreen(),
     const ProfileScreen()

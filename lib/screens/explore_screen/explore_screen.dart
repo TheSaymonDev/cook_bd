@@ -1,3 +1,4 @@
+import 'package:cook_bd/services/shared_preference_service.dart';
 import 'package:cook_bd/utils/app_colors.dart';
 import 'package:cook_bd/utils/app_urls.dart';
 import 'package:cook_bd/widgets/custom_card.dart';
@@ -16,6 +17,13 @@ class ExploreScreen extends StatefulWidget {
 
 class _ExploreScreenState extends State<ExploreScreen> {
   int _selectedCategory = 0;
+  late String  location;
+
+  @override
+  void initState() {
+    super.initState();
+    location = SharedPreferencesService().getLocation();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +96,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     children: [
                       Icon(Icons.location_on_outlined,
                           size: 25.sp, color: darkFontClr),
-                      Text('Gollamari, Khulna',
+                      Text(location,
                           style: Theme.of(context)
                               .textTheme
                               .titleSmall!

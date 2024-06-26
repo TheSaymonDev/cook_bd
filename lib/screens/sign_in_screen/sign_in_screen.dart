@@ -25,7 +25,7 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(onPressedBack: (){}, title: 'signIn'.tr),
+      appBar: CustomAppBar(onPressed: (){}, title: 'signIn'.tr),
       body: Container(
         height: double.infinity.h,
         width: double.infinity.w,

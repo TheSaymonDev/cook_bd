@@ -27,7 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(onPressedBack: (){}, title: 'signUp'.tr),
+      appBar: CustomAppBar(onPressed: (){}, title: 'signUp'.tr),
       body: Container(
         height: double.infinity.h,
         width: double.infinity.w,
