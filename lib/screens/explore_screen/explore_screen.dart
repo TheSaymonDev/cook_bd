@@ -1,3 +1,4 @@
+import 'package:cook_bd/routes/app_routes.dart';
 import 'package:cook_bd/services/shared_preference_service.dart';
 import 'package:cook_bd/utils/app_colors.dart';
 import 'package:cook_bd/utils/app_urls.dart';
@@ -28,23 +29,17 @@ class _ExploreScreenState extends State<ExploreScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _buildHeader(context),
         Gap(8.h),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('findByC'.tr,
-                    style: Theme.of(context).textTheme.titleMedium),
-                _buildCategoryList(),
-                _buildHotelGridView()
-              ],
-            ),
-          ),
-        )
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
+          child: Text('findByC'.tr,
+              style: Theme.of(context).textTheme.titleMedium)
+        ),
+        _buildCategoryList(),
+        _buildHotelGridView()
       ],
     );
   }
@@ -123,6 +118,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
       height: 74.h,
       width: double.infinity.w,
       child: ListView.separated(
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) => GestureDetector(
             onTap: () {
@@ -163,15 +159,17 @@ class _ExploreScreenState extends State<ExploreScreen> {
 
   Expanded _buildHotelGridView() {
     return Expanded(
-      child: SizedBox(
-        height: double.infinity.h,
-        width: double.infinity.w,
-        child: MasonryGridView.count(
-          shrinkWrap: true,
-          crossAxisCount: 2,
-          mainAxisSpacing: 12.h,
-          crossAxisSpacing: 8.w,
-          itemBuilder: (context, index) => CustomCard(
+      child: MasonryGridView.count(
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        crossAxisCount: 2,
+        mainAxisSpacing: 12.h,
+        crossAxisSpacing: 8.w,
+        itemBuilder: (context, index) => InkWell(
+          onTap: (){
+            Get.toNamed(AppRoutes.shopScreen);
+          },
+          borderRadius: BorderRadius.circular(12.r),
+          child: CustomCard(
             height: 296.h,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,7 +198,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                               .titleMedium),
                       const Spacer(),
                       Icon(Icons.star_border_purple500,
-                          color: yellowClr, size: 25.sp),
+                          color: yellowClr, size: 16.sp),
                       Text('4.5',
                           style:
                           Theme.of(context).textTheme.titleSmall),
@@ -244,8 +242,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
               ],
             ),
           ),
-          itemCount: 10,
         ),
+        itemCount: 10,
       ),
     );
   }

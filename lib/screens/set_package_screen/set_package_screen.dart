@@ -8,10 +8,11 @@ class SetPackageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String title = Get.arguments.toString();
     return Scaffold(
       appBar: CustomAppBar(onPressed: (){
         Get.back();
-      }, title: 'Set Package'),
+      }, title: 'Set $title Package'),
       body: Container(
         height: double.infinity.h,
         width: double.infinity.w,

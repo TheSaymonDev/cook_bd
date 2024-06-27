@@ -7,15 +7,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   final void Function() onPressed;
   final String title;
-  const CustomAppBar({super.key, required this.onPressed, required this.title});
+  final List<Widget>? actions;
+  const CustomAppBar({super.key, required this.onPressed, required this.title, this.actions});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
-      leading: IconButton(onPressed: onPressed, icon: Icon(Icons.arrow_back, size: 25.sp, color: lightBgClr)),
-      title: Text(title,  style: Get.textTheme.titleMedium!.copyWith(color: lightBgClr)),
-      toolbarHeight: preferredSize.height,
+      centerTitle: true,
+      leading: IconButton(onPressed: onPressed, icon: Icon(Icons.arrow_back, size: 25.sp, color: lightFontClr)),
+      title: Text(title,  style: Get.textTheme.titleMedium),
+      actions: actions,
+      toolbarHeight: preferredSize.height
     );
   }
 

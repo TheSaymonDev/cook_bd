@@ -19,4 +19,6 @@ class AppRoutes {
   static const aboutUsScreen = '/about_us_screen';
   static const topDonorScreen = '/top_donor_screen';
   static const privacyPolicyScreen = '/privacy_policy_screen';
+  static const setPackageScreen = '/set_package_screen';
+  static const shopScreen = '/shop_screen';
 }

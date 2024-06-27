@@ -6,8 +6,10 @@ import 'package:cook_bd/screens/identity_verification_screen/identity_verificati
 import 'package:cook_bd/screens/location_permission_screen/location_permission_screen.dart';
 import 'package:cook_bd/screens/onboarding_screen/onboarding_screen.dart';
 import 'package:cook_bd/screens/otp_verification_screen/otp_verification_screen.dart';
+import 'package:cook_bd/screens/set_package_screen/set_package_screen.dart';
 import 'package:cook_bd/screens/set_password_screen/bindings/set_password_binding.dart';
 import 'package:cook_bd/screens/set_password_screen/set_password_screen.dart';
+import 'package:cook_bd/screens/shop_screen/shop_screen.dart';
 import 'package:cook_bd/screens/sign_in_screen/bindings/sign_in_binding.dart';
 import 'package:cook_bd/screens/sign_in_screen/sign_in_screen.dart';
 import 'package:cook_bd/screens/sign_up_screen/bindings/sign_up_binding.dart';
@@ -44,6 +46,8 @@ class AppPages {
     GetPage(
         name: AppRoutes.homeScreen,
         page: () => HomeScreen(),
-        binding: HomeBinding())
+        binding: HomeBinding()),
+    GetPage(name: AppRoutes.setPackageScreen, page: () => SetPackageScreen()),
+    GetPage(name: AppRoutes.shopScreen, page: () => ShopScreen())
   ];
 }

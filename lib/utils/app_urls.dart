@@ -13,4 +13,10 @@ class AppUrls {
   static const burger = 'assets/images/burger.png';
   static const demoHotel = 'assets/images/demo_hotel.jpg';
   static const takaSign = '৳';
+
+  // For Shop Screen
+  static const demoBurger = 'assets/images/burger.jpg';
+  static const demoJuice = 'assets/images/juice.jpg';
+  static const demoFryChicken = 'assets/images/fry_chicken.jpg';
+  static const demoDrinks = 'assets/images/drinks.jpg';
 }

@@ -40,66 +40,62 @@ final lightTheme = ThemeData(
         backgroundColor: lightBgClr,
         indicatorColor: yellowClr.withOpacity(0.5)),
     cardColor: lightCardClr,
-  inputDecorationTheme: InputDecorationTheme(
-    filled: true,
-    fillColor: lightBgClr,
-    border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.r),
-      borderSide: BorderSide(color: greyClr, width: 1.5.w),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: lightBgClr,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.r),
+        borderSide: BorderSide(color: greyClr, width: 1.5.w),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.r),
+        borderSide: BorderSide(color: greyClr, width: 1.5.w),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8.r),
+        borderSide: BorderSide(color: greyClr, width: 1.5.w),
+      ),
     ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.r),
-      borderSide: BorderSide(color: greyClr, width: 1.5.w),
-    ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8.r),
-      borderSide: BorderSide(color: greyClr, width: 1.5.w),
-    ),
-  ),
-    appBarTheme: const AppBarTheme(
-    backgroundColor: lightBgClr
-)
-);
-
+    appBarTheme: const AppBarTheme(backgroundColor: lightBgClr));
 
 final darkTheme = ThemeData(
-  brightness: Brightness.dark,
-  scaffoldBackgroundColor: darkBgClr,
-  fontFamily: 'Gumela Arabic',
-  useMaterial3: true,
-  // colorScheme: const ColorScheme(
-  //     brightness: Brightness.dark,
-  //     primary: primaryClr,
-  //     onPrimary: darkFontClr,
-  //     secondary: darkCardClr,
-  //     onSecondary: darkFontClr,
-  //     error: primaryClr,
-  //     onError: lightBgClr,
-  //     surface: darkCardClr,
-  //     onSurface: darkFontClr),
-  textTheme: TextTheme(
-    bodyLarge:
-        TextStyle(fontSize: 25.sp, fontWeight: FontWeight.normal, height: 1),
-    bodyMedium:
-        TextStyle(fontSize: 20.sp, fontWeight: FontWeight.normal, height: 1),
-    bodySmall:
-        TextStyle(fontSize: 15.sp, fontWeight: FontWeight.normal, height: 1),
-    titleLarge:
-        TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold, height: 1),
-    titleMedium:
-        TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold, height: 1),
-    titleSmall:
-        TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold, height: 1),
-  ),
-  navigationBarTheme: NavigationBarThemeData(
-      iconTheme:
-          const WidgetStatePropertyAll(IconThemeData(color: darkFontClr)),
-      labelTextStyle: WidgetStatePropertyAll(TextStyle(
-          fontSize: 18.sp, fontWeight: FontWeight.bold, color: darkFontClr)),
-      shadowColor: darkBgClr,
-      backgroundColor: darkCardClr,
-      indicatorColor: yellowClr.withOpacity(0.5)),
-  cardColor: darkCardClr,
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: darkBgClr,
+    fontFamily: 'Gumela Arabic',
+    useMaterial3: true,
+    // colorScheme: const ColorScheme(
+    //     brightness: Brightness.dark,
+    //     primary: primaryClr,
+    //     onPrimary: darkFontClr,
+    //     secondary: darkCardClr,
+    //     onSecondary: darkFontClr,
+    //     error: primaryClr,
+    //     onError: lightBgClr,
+    //     surface: darkCardClr,
+    //     onSurface: darkFontClr),
+    textTheme: TextTheme(
+      bodyLarge:
+          TextStyle(fontSize: 25.sp, fontWeight: FontWeight.normal, height: 1),
+      bodyMedium:
+          TextStyle(fontSize: 20.sp, fontWeight: FontWeight.normal, height: 1),
+      bodySmall:
+          TextStyle(fontSize: 15.sp, fontWeight: FontWeight.normal, height: 1),
+      titleLarge:
+          TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold, height: 1),
+      titleMedium:
+          TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold, height: 1),
+      titleSmall:
+          TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold, height: 1),
+    ),
+    navigationBarTheme: NavigationBarThemeData(
+        iconTheme:
+            const WidgetStatePropertyAll(IconThemeData(color: darkFontClr)),
+        labelTextStyle: WidgetStatePropertyAll(TextStyle(
+            fontSize: 18.sp, fontWeight: FontWeight.bold, color: darkFontClr)),
+        shadowColor: darkBgClr,
+        backgroundColor: darkCardClr,
+        indicatorColor: yellowClr.withOpacity(0.5)),
+    cardColor: darkCardClr,
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: darkBgClr,
@@ -116,7 +112,4 @@ final darkTheme = ThemeData(
         borderSide: BorderSide(color: darkBorderClr, width: 1.w),
       ),
     ),
-    appBarTheme: const AppBarTheme(
-        backgroundColor: darkBgClr
-    )
-);
+    appBarTheme: const AppBarTheme(backgroundColor: darkBgClr));

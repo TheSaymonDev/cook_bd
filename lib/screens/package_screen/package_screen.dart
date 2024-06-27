@@ -1,3 +1,4 @@
+import 'package:cook_bd/routes/app_routes.dart';
 import 'package:cook_bd/screens/package_screen/models/package_model.dart';
 import 'package:cook_bd/screens/package_screen/widgets/package_card.dart';
 import 'package:cook_bd/utils/app_colors.dart';
@@ -6,6 +7,7 @@ import 'package:cook_bd/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 class PackageScreen extends StatelessWidget {
   PackageScreen({super.key});
@@ -34,15 +36,21 @@ class PackageScreen extends StatelessWidget {
               Gap(16.h),
               PackageCard(title: 'Lunch', packageItems: _package),
               Gap(8.h),
-              CustomElevatedButton(onPressed: () {}, name: 'Buy Package'),
+              CustomElevatedButton(onPressed: () {
+                Get.toNamed(AppRoutes.setPackageScreen, arguments: 'Lunch');
+              }, name: 'Buy Package'),
               Gap(20.h),
               PackageCard(title: 'Dinner', packageItems: _package),
               Gap(8.h),
-              CustomElevatedButton(onPressed: () {}, name: 'Buy Package'),
+              CustomElevatedButton(onPressed: () {
+                Get.toNamed(AppRoutes.setPackageScreen, arguments: 'Dinner');
+              }, name: 'Buy Package'),
               Gap(20.h),
               PackageCard(title: 'Lunch+Dinner', packageItems: _package),
               Gap(8.h),
-              CustomElevatedButton(onPressed: () {}, name: 'Buy Package'),
+              CustomElevatedButton(onPressed: () {
+                Get.toNamed(AppRoutes.setPackageScreen, arguments: 'Lunch+Dinner');
+              }, name: 'Buy Package'),
               Gap(16.h)
             ],
           ),
