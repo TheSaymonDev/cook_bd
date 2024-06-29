@@ -19,4 +19,7 @@ class AppUrls {
   static const demoJuice = 'assets/images/juice.jpg';
   static const demoFryChicken = 'assets/images/fry_chicken.jpg';
   static const demoDrinks = 'assets/images/drinks.jpg';
+
+  // For Profile Screen
+  static const demoUser = 'assets/images/user.png';
 }

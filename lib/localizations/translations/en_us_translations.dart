@@ -103,5 +103,20 @@ final Map<String, String> enUs = {
   'helpCenter': 'Help Center',
   'requestAccountDeletion': 'Request Account Deletion',
   'addAnotherAccount': 'Add Another Account',
-  'signOut': 'Sign Out'
+  'signOut': 'Sign Out',
+
+  // For Cart Screen
+  'regularOrder': 'Regular Order',
+  'packageOrder': 'Package Order',
+  'deliveryLocation': 'Delivery Location',
+  'changeLocation': 'Change Location',
+
+  // For Profile Update
+  'profileUpdate': 'Profile Update',
+  'fullNameLabel': 'Full Name',
+  'fullNameHint': 'Please enter your full name',
+  'dateOfBirthLabel': 'Date of Birth',
+  'dateOfBirthHint': 'Please pick your date of birth',
+  'changePassword': 'Change Password',
+  'save': 'Save',
 };

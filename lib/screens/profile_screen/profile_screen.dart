@@ -1,3 +1,4 @@
+import 'package:cook_bd/routes/app_routes.dart';
 import 'package:cook_bd/screens/profile_screen/widgets/profile_clickable_item.dart';
 import 'package:cook_bd/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,9 @@ class ProfileScreen extends StatelessWidget {
             ProfileClickableItem(
                 iconData: Icons.person_outline,
                 title: 'personalData',
-                onTap: () {}),
+                onTap: () {
+                  Get.toNamed(AppRoutes.profileUpdateScreen);
+                }),
             Gap(16.h),
             ProfileClickableItem(
                 iconData: Icons.favorite_outline,

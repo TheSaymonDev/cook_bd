@@ -28,6 +28,7 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 2,
       color: cardClr,
       margin: margin,
       shape: RoundedRectangleBorder(
