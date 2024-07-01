@@ -77,11 +77,6 @@ class ProfileScreen extends StatelessWidget {
                 iconData: Icons.delete_outline,
                 title: 'requestAccountDeletion',
                 onTap: () {}),
-            Gap(16.h),
-            ProfileClickableItem(
-                iconData: Icons.add_box_outlined,
-                title: 'addAnotherAccount',
-                onTap: () {}),
             Gap(32.h),
             OutlinedButton(
               onPressed: () {},

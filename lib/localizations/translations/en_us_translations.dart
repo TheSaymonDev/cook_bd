@@ -119,4 +119,8 @@ final Map<String, String> enUs = {
   'dateOfBirthHint': 'Please pick your date of birth',
   'changePassword': 'Change Password',
   'save': 'Save',
+
+  // For Set Package Screen
+  'chooseDate': 'Choose your date',
+  'chooseTime': 'Choose your time',
 };

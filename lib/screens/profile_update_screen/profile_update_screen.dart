@@ -85,6 +85,8 @@ class ProfileUpdateScreen extends StatelessWidget {
                       },
                       icon: Icon(Icons.calendar_month,
                           color: yellowClr, size: 20.sp)),
+                  readOnly: true
+                  ,
                   hintText: 'dateOfBirthHint'.tr,
                   controller: _dateOfBirthController),
               Gap(16.h),
@@ -147,14 +149,4 @@ class ProfileUpdateScreen extends StatelessWidget {
     }
   }
 
-  String formatDate(String dobString) {
-    try {
-      final date = DateTime.parse(dobString);
-      final formatter = DateFormat('yyyy-MM-dd');
-      return formatter.format(date);
-    } catch (error) {
-      // Handle parsing error (optional)
-      return dobString; // Or return a default value
-    }
-  }
 }
