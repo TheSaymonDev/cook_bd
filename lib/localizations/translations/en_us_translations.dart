@@ -110,6 +110,13 @@ final Map<String, String> enUs = {
   'packageOrder': 'Package Order',
   'deliveryLocation': 'Delivery Location',
   'changeLocation': 'Change Location',
+  'billDetails': 'Bill Details:',
+  'subTotal': 'Sub Total',
+  'deliveryFee': 'Delivery Fee',
+  'serviceFee': 'Service Fee',
+  'discount': 'Discount',
+  'total': 'Total',
+  'checkout': 'Checkout',
 
   // For Profile Update
   'profileUpdate': 'Profile Update',

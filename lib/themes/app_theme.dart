@@ -7,16 +7,16 @@ final lightTheme = ThemeData(
     scaffoldBackgroundColor: lightBgClr,
     useMaterial3: true,
     fontFamily: 'Gumela Arabic',
-    // colorScheme: const ColorScheme(
-    //     brightness: Brightness.light,
-    //     primary: primaryClr,
-    //     onPrimary: lightFontClr,
-    //     secondary: lightCardClr,
-    //     onSecondary: lightFontClr,
-    //     error: primaryClr,
-    //     onError: lightBgClr,
-    //     surface: lightCardClr,
-    //     onSurface: lightFontClr),
+    colorScheme: const ColorScheme(
+        brightness: Brightness.light,
+        primary: yellowClr,
+        onPrimary: lightFontClr,
+        secondary: lightCardClr,
+        onSecondary: lightFontClr,
+        error: Colors.red,
+        onError: lightBgClr,
+        surface: lightCardClr,
+        onSurface: lightFontClr),
     textTheme: TextTheme(
       bodyLarge:
           TextStyle(fontSize: 25.sp, fontWeight: FontWeight.normal, height: 1),

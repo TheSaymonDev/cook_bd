@@ -1,6 +1,7 @@
 import 'package:cook_bd/routes/app_routes.dart';
 import 'package:cook_bd/screens/profile_screen/widgets/profile_clickable_item.dart';
 import 'package:cook_bd/utils/app_colors.dart';
+import 'package:cook_bd/widgets/custom_outlined_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -24,9 +25,13 @@ class ProfileScreen extends StatelessWidget {
               height: 100.h,
               width: 100.w,
               alignment: Alignment.center,
-              decoration: const BoxDecoration(
-                  shape: BoxShape.circle, color: yellowClr),
-              child: Icon(Icons.person_sharp, size: 70.sp, color: lightBgClr,),
+              decoration:
+                  const BoxDecoration(shape: BoxShape.circle, color: yellowClr),
+              child: Icon(
+                Icons.person_sharp,
+                size: 70.sp,
+                color: lightBgClr,
+              ),
             ),
             Gap(16.h),
             Text('Md. Saymon', style: Theme.of(context).textTheme.titleLarge),
@@ -78,25 +83,7 @@ class ProfileScreen extends StatelessWidget {
                 title: 'requestAccountDeletion',
                 onTap: () {}),
             Gap(32.h),
-            OutlinedButton(
-              onPressed: () {},
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.logout,
-                    size: 20.sp,
-                    color: Colors.red,
-                  ),
-                  Gap(8.w),
-                  Text('signOut'.tr,
-                      style: Theme.of(context)
-                          .textTheme
-                          .titleMedium!
-                          .copyWith(color: Colors.red))
-                ],
-              ),
-            )
+            CustomOutlinedIconButton(onPressed: (){}, name: 'Sign Out', iconData: Icons.logout)
           ],
         ),
       ),

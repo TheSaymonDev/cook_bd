@@ -1,6 +1,8 @@
 import 'package:cook_bd/screens/set_package_screen/models/package_item.dart';
 import 'package:cook_bd/utils/app_colors.dart';
+import 'package:cook_bd/utils/app_const_functions.dart';
 import 'package:cook_bd/widgets/custom_appbar.dart';
+import 'package:cook_bd/widgets/custom_choose_item_button.dart';
 import 'package:cook_bd/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -36,121 +38,95 @@ class _SetPackageScreenState extends State<SetPackageScreen> {
         child: Column(
           children: [
             Gap(16.h),
-            _buildChooseItem(context, _selectedDateRange, _pickDateRange),
+            CustomChooseItemButton(
+                onTap: _pickDateRange, title: _selectedDateRange),
             Gap(16.h),
-            _buildChooseItem(context, _selectedTime, _pickTime),
+            CustomChooseItemButton(onTap: _pickTime, title: _selectedTime),
             Gap(16.h),
             CustomElevatedButton(onPressed: () {}, name: 'Generate'),
-            Expanded(
-                child: ListView.separated(
-                    padding: EdgeInsets.symmetric(vertical: 16.h),
-                    itemBuilder: (context, index) => Column(
-                          children: [
-                            Container(
-                              height: 44.h,
-                              width: double.infinity.w,
-                              padding: EdgeInsets.symmetric(horizontal: 16.w),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.r),
-                                  color: yellowClr),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text('Day 1',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleMedium!
-                                          .copyWith(color: darkFontClr)),
-                                  Text('2024-07-01',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleMedium!
-                                          .copyWith(color: darkFontClr)),
-                                ],
-                              ),
-                            ),
-                            Gap(8.h),
-                            Column(
-                              children: List.generate(
-                                packages.length,
-                                (index) => Container(
-                                  margin: EdgeInsets.only(bottom: 8.h),
-                                  height: 44.h,
-                                  width: double.infinity.w,
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 16.w),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8.r),
-                                      color: lightBgClr,
-                                      border: Border.all(color: greyClr)),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Text('1. ${packages[index].name}',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyMedium),
-                                      Row(
-                                        children: [
-                                          Icon(Icons.remove, size: 20.sp),
-                                          SizedBox(
-                                              width: 40.w,
-                                              child: Text(packages[index].quantity.toString(),
-                                                  style: Theme.of(context)
-                                                      .textTheme
-                                                      .titleMedium,
-                                                  textAlign: TextAlign.center)),
-                                          Icon(Icons.add, size: 20.sp),
-                                          Gap(32.w),
-                                          Icon(Icons.delete,
-                                              color: Colors.red, size: 20.sp)
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                    separatorBuilder: (context, index) => Gap(16.h),
-                    itemCount: 5))
+            Expanded(child: _buildPackageList())
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            customSuccessMessage(message: 'Package add to cart');
+          },
           backgroundColor: yellowClr,
           foregroundColor: lightBgClr,
           child: const Icon(Icons.add_shopping_cart)),
     );
   }
 
-  Widget _buildChooseItem(
-      BuildContext context, String title, void Function() onTap) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 44.h,
-        width: double.infinity.w,
-        padding: EdgeInsets.symmetric(horizontal: 8.w),
-        decoration: BoxDecoration(
-            color: lightBgClr,
-            border: Border.all(color: yellowClr),
-            borderRadius: BorderRadius.circular(8.r)),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(title, style: Theme.of(context).textTheme.titleMedium),
-            Icon(Icons.arrow_circle_down, size: 20.sp, color: yellowClr)
-          ],
+  ListView _buildPackageList() {
+    return ListView.separated(
+        padding: EdgeInsets.symmetric(vertical: 16.h),
+        itemBuilder: (context, index) => _buildPackageItem(context),
+        separatorBuilder: (context, index) => Gap(16.h),
+        itemCount: 5);
+  }
+
+  Column _buildPackageItem(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: 44.h,
+          width: double.infinity.w,
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.r), color: yellowClr),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Day 1',
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(color: darkFontClr)),
+              Text('2024-07-01',
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .copyWith(color: darkFontClr)),
+            ],
+          ),
         ),
-      ),
+        Gap(8.h),
+        Column(
+            children: List.generate(
+                packages.length,
+                (index) => Container(
+                    margin: EdgeInsets.only(bottom: 8.h),
+                    height: 44.h,
+                    width: double.infinity.w,
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.r),
+                        color: lightBgClr,
+                        border: Border.all(color: greyClr)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text('1. ${packages[index].name}',
+                            style: Theme.of(context).textTheme.bodyMedium),
+                        Row(
+                          children: [
+                            Icon(Icons.remove, size: 20.sp),
+                            SizedBox(
+                                width: 40.w,
+                                child: Text(packages[index].quantity.toString(),
+                                    style:
+                                        Theme.of(context).textTheme.titleMedium,
+                                    textAlign: TextAlign.center)),
+                            Icon(Icons.add, size: 20.sp),
+                            Gap(32.w),
+                            Icon(Icons.delete, color: Colors.red, size: 20.sp)
+                          ],
+                        )
+                      ],
+                    ))))
+      ],
     );
   }
 

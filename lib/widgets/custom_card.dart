@@ -15,13 +15,13 @@ class CustomCard extends StatelessWidget {
 
   const CustomCard({
     super.key,
-    this.height = double.infinity,
-    this.width = double.infinity,
+    this.height,
+    this.width,
     required this.child,
     this.padding,
     this.margin,
-    this.borderRadius = 12.0,
-    this.cardClr = lightBgClr,
+    this.borderRadius,
+    this.cardClr,
     this.border
   });
 
@@ -29,18 +29,19 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
-      color: cardClr,
+      color: cardClr ?? lightBgClr,
       margin: margin,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(borderRadius!.r),
+        borderRadius: BorderRadius.circular(borderRadius ?? 12.0.r),
       ),
       child: Container(
-        height: height!.h,
-        width: width!.w,
+        height: height,
+        width: width,
         padding: padding,
+        margin: margin,
         decoration: BoxDecoration(
-            color: cardClr,
-            borderRadius: BorderRadius.circular(borderRadius!.r),
+            color: cardClr ?? lightBgClr,
+            borderRadius: BorderRadius.circular(borderRadius ?? 12.0.r),
             border: border
         ),
         child: child,
